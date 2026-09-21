@@ -1,0 +1,13 @@
+# Excel lock files
+~$*.xlsx
+
+# Property images (large, generated)
+property_images/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+Thumbs.db
+.DS_Store
