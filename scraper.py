@@ -14,6 +14,15 @@ CITIES = {
     "Morges": "morges",
 }
 
+# Common NPAs for each city
+CITY_NPA = {
+    "Nyon": ["1260"],
+    "Rolle": ["1180"],
+    "Gland": ["1196"],
+    "Lausanne": ["1003", "1004", "1005", "1006", "1007", "1010", "1011", "1012"],
+    "Morges": ["1110"],
+}
+
 
 def main():
     all_urls = {}
@@ -129,9 +138,15 @@ def main():
                         except:
                             pass
                     
+                    # Extract NPA from title
+                    npa_match = re.search(r'\b(\d{4})\b', title)
+                    npa = npa_match.group(1) if npa_match else ''
+                    if not npa and city_name in CITY_NPA:
+                        npa = CITY_NPA[city_name][0]
+                    
                     all_listings.append({
                         'City': city_name,
-                        'NPA': '',
+                        'NPA': npa,
                         'Property Type': prop_type,
                         'Rooms': rooms,
                         'Size (m2)': size,
@@ -181,6 +196,15 @@ def main():
                 
                 body = page.inner_text('body')[:8000]
                 
+                # Extract address with NPA
+                addr_match = re.search(r'(\d{4}\s+\w[\w\s,.-]+?)(?:\n|$)', body)
+                if addr_match:
+                    full_addr = addr_match.group(1).strip()
+                    listing['Address'] = full_addr
+                    npa_match = re.search(r'\b(\d{4})\b', full_addr)
+                    if npa_match:
+                        listing['NPA'] = npa_match.group(1)
+                
                 year_match = re.search(r'(?:Year of construction|Built in|Année de construction)[:\s]*(\d{4})', body, re.IGNORECASE)
                 if year_match:
                     listing['Year Built'] = year_match.group(1)
@@ -214,6 +238,22 @@ def main():
                 if re.search(r'(?:neuf|new construction|neuve)', body, re.IGNORECASE):
                     listing['New Construction'] = 'Yes'
                 
+                # Occupancy detection (life annuity, tenant, age)
+                occupancy = ''
+                age_match = re.search(r'(\d{2,3})\s*[-\s]?\s*(?:year|ans|jahre|jährig)', body, re.IGNORECASE)
+                if re.search(r'(?:life annuity|annuity|usufruit|bail.*vie|vie.*duration)', body, re.IGNORECASE):
+                    if age_match:
+                        occupancy = f'Life annuity - occupied until {age_match.group(1)}yo dies'
+                    else:
+                        occupancy = 'Life annuity - occupied'
+                elif re.search(r'(?:currently rented|is rented|rented to|rented furnished|rented vacant|loué|locataire|vermietet)', body, re.IGNORECASE):
+                    occupancy = 'Rented - tenant in place'
+                elif re.search(r'(?:sold with tenant|with tenant|occupied by|currently occupied|bewohnt)', body, re.IGNORECASE):
+                    occupancy = 'Occupied'
+                elif age_match and int(age_match.group(1)) >= 70:
+                    occupancy = f'Occupant {age_match.group(1)}yo'
+                listing['Occupancy'] = occupancy
+                
                 html = page.content()
                 img_urls = list(set(re.findall(r'https://www\.immobilier\.ch/Medias/[^\s"<>\']+/images/(?:full|gridbig)/[^\s"<>\']+\.(?:jpg|jpeg|png|webp)', html)))
                 if img_urls:
@@ -242,7 +282,7 @@ def main():
         'Parking', 'Floor', 'Cave/Cellar', 'Balcony', 'Terrace',
         'Garden', 'Elevator', 'View', 'Renovated', 'New Construction',
         'Energy Class', 'Latitude', 'Longitude', 'Description',
-        'Images', 'Source', 'URL'
+        'Images', 'Source', 'URL', 'Occupancy'
     ]
     
     with open(OUTPUT_FILE, 'w', newline='', encoding='utf-8') as f:
