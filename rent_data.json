@@ -1,0 +1,418 @@
+{
+  "stats": {
+    "Nyon": {
+      "median_rent_m2": 30.14,
+      "avg_rent_m2": 30.86,
+      "count": 12,
+      "listings": [
+        {
+          "price": 4300,
+          "size": 168,
+          "rooms": 4.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/nyon/bernard-nicod-rolle-2464/spacious-penthouse-with-lake-and-mont-blanc-views-1551224"
+        },
+        {
+          "price": 3080,
+          "size": 104,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/nyon/naef-immobilier-nyon-342/bel-appartement-45-pieces-env-104m2-rez-chaussee-terrasse-1600353"
+        },
+        {
+          "price": 1185,
+          "size": 36,
+          "rooms": null,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/nyon/privera-lausanne-972/grab-this-opportunity-magnificent-studio-in-recent-building-1601529"
+        },
+        {
+          "price": 1490,
+          "size": 48,
+          "rooms": 2.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/nyon/privera-lausanne-972/grab-it-now-splendid-apartment-in-residential-area-1601532"
+        },
+        {
+          "price": 2080,
+          "size": 69,
+          "rooms": 3.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/nyon/valaur-immobilier-2384/for-rent-in-nyon-3-bedroom-apartment-2-minutes-from-the-train-station-1602156"
+        },
+        {
+          "price": 1200,
+          "size": 50,
+          "rooms": 2.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/nyon/gerance-robert-crot-cie-256/2-room-apartment-with-large-balcony-1600087"
+        },
+        {
+          "price": 4300,
+          "size": 168,
+          "rooms": 4.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/nyon/immo-v-3083/spacious-with-character-and-ideal-location-furnished-1602904"
+        },
+        {
+          "price": 1350,
+          "size": 50,
+          "rooms": 2.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/nyon/gerance-robert-crot-cie-256/2-room-apartment-with-large-balcony-1600088"
+        },
+        {
+          "price": 2492,
+          "size": 126,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/nyon/bernard-nicod-nyon-gerance-2203/nyon-large-45-room-apartment-with-garden-1601537"
+        },
+        {
+          "price": 4200,
+          "size": 85,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/nyon/cityus-sarl-2621/bright-and-airy-2-bedroom-apartment-close-to-nyon-city-center-1603256"
+        },
+        {
+          "price": 2300,
+          "size": 70,
+          "rooms": 3.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/nyon/livit-ag-real-estate-management-675/pyour-home-in-nyon-p-1576512"
+        },
+        {
+          "price": 1060,
+          "size": 25,
+          "rooms": null,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/nyon/cogestim-nyon-363/bright-studio-in-downtown-nyon-1583367"
+        }
+      ]
+    },
+    "Rolle": {
+      "median_rent_m2": 31.09,
+      "avg_rent_m2": 30.51,
+      "count": 12,
+      "listings": [
+        {
+          "price": 1921,
+          "size": 70,
+          "rooms": 3.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/rolle/cogestim-nyon-363/in-small-building-in-rolle-3-room-apartment-on-the-upper-ground-floor-1533784"
+        },
+        {
+          "price": 2450,
+          "size": 104,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/rolle/retraites-populaires-1429/apartment-1597222"
+        },
+        {
+          "price": 3420,
+          "size": 110,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/rolle/noble-vive-estate-2817/spacious-and-bright-with-large-terrace-1554291"
+        },
+        {
+          "price": 2195,
+          "size": 97,
+          "rooms": 4.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/rolle/cogestim-nyon-363/charming-4-room-ground-floor-apartment-1596730"
+        },
+        {
+          "price": 2265,
+          "size": 79,
+          "rooms": 3.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/rolle/cogestim-nyon-363/span-classs5zcwambeautiful-3-room-attic-apartment-span-1552608"
+        },
+        {
+          "price": 1600,
+          "size": 46,
+          "rooms": 2.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/rolle/cogestim-nyon-363/new-25-room-apartments-in-the-center-of-rolle-1594532"
+        },
+        {
+          "price": 2680,
+          "size": 79,
+          "rooms": 3.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/rolle/regicote-1021/large-bright-3-room-apartment-1491170"
+        },
+        {
+          "price": 3600,
+          "size": 111,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/rolle/galland-cie-254/for-rent-apartment-1180-rolle-5736420010-1546520"
+        },
+        {
+          "price": 2950,
+          "size": 97,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/rolle/cogestim-nyon-363/new-45-room-apartment-in-the-center-of-rolle-1594535"
+        },
+        {
+          "price": 2201,
+          "size": 60,
+          "rooms": 2.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/rolle/regimo-lausanne-865/new-development-in-rolle-1597812"
+        },
+        {
+          "price": 1430,
+          "size": 33,
+          "rooms": 1.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/rolle/cogestim-nyon-363/new-15-room-apartment-in-the-center-of-rolle-1594534"
+        },
+        {
+          "price": 2650,
+          "size": 125,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/rolle/apleona-schweiz-ag-670/beautiful-apartment-stone-s-throw-from-the-lake-1346317"
+        }
+      ]
+    },
+    "Gland": {
+      "median_rent_m2": 24.23,
+      "avg_rent_m2": 23.65,
+      "count": 13,
+      "listings": [
+        {
+          "price": 2650,
+          "size": 108,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/weck-aeby-cie-52/45-room-apartment-with-mezzanine-in-gland-1603113"
+        },
+        {
+          "price": 2290,
+          "size": 116,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/retraites-populaires-1429/apartment-1601864"
+        },
+        {
+          "price": 1510,
+          "size": 74,
+          "rooms": 3.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/apleona-schweiz-ag-670/spacious-35-room-apartment-1600439"
+        },
+        {
+          "price": 1720,
+          "size": 71,
+          "rooms": 2.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/weck-aeby-cie-52/25-room-apartment-with-terrace-in-gland-1603294"
+        },
+        {
+          "price": 3090,
+          "size": 140,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/luxity-2238/gland-spacious-45-room-apartment-renovated-2-minutes-from-the-train-station-1551086"
+        },
+        {
+          "price": 2380,
+          "size": 82,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/rilsa-288/35-room-apartment-on-the-1st-floor-1598838"
+        },
+        {
+          "price": 1655,
+          "size": 72,
+          "rooms": 2.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/gerofinance-agences-location-2217/beautiful-2-room-apartment-on-the-3rd-floor-1597188"
+        },
+        {
+          "price": 2790,
+          "size": 120,
+          "rooms": 5.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/rosset-immobilier-geneve-vaud-fribourg-siege-social-46/55-room-apartment-for-rent-in-gland-3rd-floor-1552767"
+        },
+        {
+          "price": 4060,
+          "size": 149,
+          "rooms": 6.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/bernard-nicod-nyon-gerance-2203/large-65-room-apartment-with-garden-1589249"
+        },
+        {
+          "price": 2700,
+          "size": 160,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/luxity-2238/gland-spacious-bright-45-room-duplex-of-approx-160-m-1597720"
+        },
+        {
+          "price": 2995,
+          "size": 111,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/gerofinance-regie-rhone-geneve-44/new-45-room-penthouse-apartment-of-approx-111-with-terrace-of-approx-60-1564901"
+        },
+        {
+          "price": 2300,
+          "size": 90,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/gerance-robert-crot-cie-256/renovated-apartment-ideal-for-family-located-1559637"
+        },
+        {
+          "price": 1888,
+          "size": 77,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/gland/allianz-suisse-immobilier-bussigny-677/in-quiet-neighborhood-1586684"
+        }
+      ]
+    },
+    "Lausanne": {
+      "median_rent_m2": 27.46,
+      "avg_rent_m2": 26.3,
+      "count": 11,
+      "listings": [
+        {
+          "price": 2365,
+          "size": 125,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/lausanne/fidi-246/35-room-apartment-of-125-loft-style-on-one-level-1534021"
+        },
+        {
+          "price": 2500,
+          "size": 80,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/lausanne/bernard-nicod-lausanne-gare-gerance-2201/new-magnificent-and-1581234"
+        },
+        {
+          "price": 2450,
+          "size": 101,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/lausanne/regie-leman-2841/span-langenbeautiful-45-room-apartment-of-101-with-balcony-in-lausanne-span-1599401"
+        },
+        {
+          "price": 1550,
+          "size": 68,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/lausanne/bernard-nicod-lausanne-benjamin-constant-gerance-2200/nice-apartment-located-near-the-chuv-1600213"
+        },
+        {
+          "price": 1850,
+          "size": 90,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/lausanne/allianz-suisse-immobilier-bussigny-677/35-room-apartment-close-to-the-chailly-district-1600907"
+        },
+        {
+          "price": 1570,
+          "size": 54,
+          "rooms": 2.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/lausanne/helvetia-assurances-gerance-immobiliere-lausanne-1222/downtown-apartment-close-to-all-amenities-1600417"
+        },
+        {
+          "price": 2000,
+          "size": 71,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/lausanne/thomas-regie-fonciere-2098/35-room-family-apartment-on-the-2nd-floor-with-elevator-1600491"
+        },
+        {
+          "price": 1620,
+          "size": 59,
+          "rooms": 2.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/lausanne/move-im-2404/for-rent-apartment-1004-lausanne-603001020301-1601157"
+        },
+        {
+          "price": 1190,
+          "size": 18,
+          "rooms": null,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/lausanne/room-estate-1443/modern-coliving-apartment-at-avenue-france-in-lausanne-1600280"
+        },
+        {
+          "price": 1480,
+          "size": 53,
+          "rooms": 2.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/lausanne/cogestim-lausanne-237/charming-25-room-apartment-in-the-heart-of-lausanne-1601575"
+        },
+        {
+          "price": 1700,
+          "size": 54,
+          "rooms": 2.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/lausanne/retraites-populaires-1429/apartment-1603351"
+        },
+        {
+          "price": 1125,
+          "size": 41,
+          "rooms": null,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/lausanne/cogestim-lausanne-237/large-studio-apartment-available-in-the-heights-of-lausanne-1602417"
+        }
+      ]
+    },
+    "Morges": {
+      "median_rent_m2": 28.87,
+      "avg_rent_m2": 27.12,
+      "count": 14,
+      "listings": [
+        {
+          "price": 5600,
+          "size": 152,
+          "rooms": 5.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/bernard-nicod-morges-gerance-2202/span-classsome-classmagnificent-duplex-apartment-with-panoramic-lake-views-span-1532819"
+        },
+        {
+          "price": 2920,
+          "size": 158,
+          "rooms": 5.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/luxity-2238/beautiful-55-room-duplex-for-rent-in-yens-near-morges-1559157"
+        },
+        {
+          "price": 1730,
+          "size": 78,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/rosset-immobilier-geneve-vaud-fribourg-siege-social-46/span-classlbl-text35-room-apartment-on-the-8th-floor-span-1548792"
+        },
+        {
+          "price": 1860,
+          "size": 80,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/regimo-lausanne-865/span-classlbl2city-center-apartment-span-1532990"
+        },
+        {
+          "price": 2450,
+          "size": 80,
+          "rooms": 4.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/gerances-luze-258/4-room-duplex-apartment-1587126"
+        },
+        {
+          "price": 3436,
+          "size": 99,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/cogestim-lausanne-237/beautiful-apartment-with-large-terrace-morges-city-center-1544044"
+        },
+        {
+          "price": 1530,
+          "size": 53,
+          "rooms": 2.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/retraites-populaires-1429/apartment-864808"
+        },
+        {
+          "price": 1650,
+          "size": 65,
+          "rooms": 3.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/galland-cie-254/for-rent-apartment-1110-morges-1077400030-1577229"
+        },
+        {
+          "price": 1300,
+          "size": 41,
+          "rooms": 2.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/galland-cie-254/for-rent-apartment-1110-morges-1077400020-1520825"
+        },
+        {
+          "price": 2611,
+          "size": 105,
+          "rooms": 4.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/sbb-ag-1741/superb-modern-apartment-with-balcony-1567544"
+        },
+        {
+          "price": 2500,
+          "size": 115,
+          "rooms": 4.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/retraites-populaires-1429/apartment-1555457"
+        },
+        {
+          "price": 1450,
+          "size": 50,
+          "rooms": 2.0,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/bernard-nicod-lausanne-benjamin-constant-gerance-2200/beautiful-apartment-for-rent-in-morges-10-minutes-walk-from-the-lake-1585952"
+        },
+        {
+          "price": 1410,
+          "size": 62,
+          "rooms": 2.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/regie-croset-404/25-room-apartment-on-the-1st-floor-in-morges-1596769"
+        },
+        {
+          "price": 2640,
+          "size": 90,
+          "rooms": 3.5,
+          "url": "https://www.immobilier.ch/en/rent/apartment/vaud/morges/fehlmann-immobilier-1917/35-room-apartment-in-the-city-center-1594169"
+        }
+      ]
+    }
+  },
+  "generated": "2026-10-27"
+}

@@ -1,1 +1,937 @@
-{"generated": "2026-10-12", "count": 24, "items": [{"city": "Morges", "npa": "1110", "addr": "1110 Morges,", "rooms": "4", "size": 85, "price": 760000, "ppm": 8941, "score": 74, "flag": "", "amenities": ["view"], "reasons": "Great value CHF 8941/m2; Good size 85m2; Renovated; Open view; 4.0rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/morges/vpi-courtage-467/for-sale-apartment-1110-morges-6257755-1587969"}, {"city": "Morges", "npa": "1110", "addr": "1110 Morges,", "rooms": "3.5", "size": 109, "price": 730000, "ppm": 6697, "score": 72, "flag": "", "amenities": ["renovated"], "reasons": "Excellent value CHF 6697/m2; Large 109m2; Renovated; 3.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/morges/sev-immobilier-3069/for-sale-condominium-apartment-1110-morges-20261009-1592927"}, {"city": "Lausanne", "npa": "1010", "addr": "1010 Lausanne,", "rooms": "5.5", "size": 129, "price": 770000, "ppm": 5969, "score": 70, "flag": "", "amenities": ["view"], "reasons": "Excellent value CHF 5969/m2; Large 129m2; Bright; Garden view", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/proximmo-agence-immobiliere-sarl-622/votre-logement-familial-20-min-lausanne-1485790"}, {"city": "Gland", "npa": "1196", "addr": "1196 Gland,", "rooms": "3.5", "size": 82, "price": 780000, "ppm": 9512, "score": 69, "flag": "", "amenities": ["view"], "reasons": "Great value CHF 9512/m2; Good size 82m2; Bright; Open view; 3.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/gland/omnia-immobilier-rolle-445/beautiful-35-room-apartment-in-gland-1460475"}, {"city": "Gland", "npa": "1196", "addr": "1196 Gland,", "rooms": "3.5", "size": 82, "price": 780000, "ppm": 9512, "score": 69, "flag": "", "amenities": ["view"], "reasons": "Great value CHF 9512/m2; Good size 82m2; Bright; Open view; 3.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/gland/dezage-sarl-2077/charming-apartment-close-to-all-amenities-1581074"}, {"city": "Gland", "npa": "1196", "addr": "1196 Gland,", "rooms": "3.5", "size": 73, "price": 795000, "ppm": 10890, "score": 55, "flag": "", "amenities": ["view"], "reasons": "Good value CHF 10890/m2; Medium 73m2; Bright; Garden view; 3.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/gland/burnier-cie-233/35-room-apartment-in-gland-1576776"}, {"city": "Lausanne", "npa": "1005", "addr": "1005 Lausanne,", "rooms": "2.5", "size": 43, "price": 550000, "ppm": 12791, "score": 48, "flag": "", "amenities": [], "reasons": "Fair value CHF 12791/m2; Bright; Open view; 2.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/regie-duboux-riviera-2599/25-room-apartment-lausanne-1479348"}, {"city": "Nyon", "npa": "1260", "addr": "1260 Nyon,", "rooms": "3.5", "size": 81, "price": 670000, "ppm": 8272, "score": 47, "flag": "", "amenities": [], "reasons": "Great value CHF 8272/m2; Good size 81m2; 3.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/nyon/cologny-properties-3110/luxury-apartment-1593459"}, {"city": "Gland", "npa": "1196", "addr": "1196 Gland,", "rooms": "3.5", "size": 80, "price": 720000, "ppm": 9000, "score": 47, "flag": "RENTED", "amenities": [], "reasons": "Great value CHF 9000/m2; Good size 80m2; Bright; Garden view; 3.5rm ideal; Tenant in place", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/gland/ikami-1611/magnificent-35-room-apartment-for-sale-gland-sold-with-tenant-078-403-10-20-1584268"}, {"city": "Lausanne", "npa": "1003", "addr": "1003 Lausanne,", "rooms": "3.5", "size": 81, "price": 670000, "ppm": 8272, "score": 47, "flag": "", "amenities": [], "reasons": "Great value CHF 8272/m2; Good size 81m2; 3.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/cologny-properties-3110/luxury-apartment-1593712"}, {"city": "Lausanne", "npa": "1010", "addr": "1010 Lausanne,", "rooms": "3.5", "size": 75, "price": 750000, "ppm": 10000, "score": 45, "flag": "", "amenities": [], "reasons": "Good value CHF 10000/m2; Good size 75m2; Needs work; 3.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/rham-ventes-lausanne-1873/for-sale-condominium-apartment-1010-lausanne-ap0192-1455126"}, {"city": "Lausanne", "npa": "1010", "addr": "1010 Lausanne,", "rooms": "3.5", "size": 75, "price": 755000, "ppm": 10067, "score": 42, "flag": "", "amenities": [], "reasons": "Good value CHF 10067/m2; Good size 75m2; 3.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/switzerland-sothebys-lausanne-429/bright-apartment-with-wonderful-potential-1551036"}, {"city": "Morges", "npa": "1110", "addr": "1110 Morges,", "rooms": "2.5", "size": 50, "price": 690000, "ppm": 13800, "score": 41, "flag": "", "amenities": [], "reasons": "Fair value CHF 13800/m2; Medium 50m2; Bright; 2.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/morges/immocloud-sarl-2545/promotion-residence-cedre-the-construction-site-is-open-1564549"}, {"city": "Lausanne", "npa": "1010", "addr": "1010 Lausanne,", "rooms": "2.5", "size": 48, "price": 735000, "ppm": 15312, "score": 32, "flag": "", "amenities": [], "reasons": "Avg value CHF 15312/m2; Bright; 2.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/properti-ag-2229/contemporary-address-in-the-heart-of-lausanne-1592615"}, {"city": "Lausanne", "npa": "1010", "addr": "1010 Lausanne,", "rooms": "2.5", "size": 48, "price": 750000, "ppm": 15625, "score": 32, "flag": "", "amenities": [], "reasons": "Avg value CHF 15625/m2; Bright; 2.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/properti-ag-2229/contemporary-address-in-the-heart-of-lausanne-1592619"}, {"city": "Lausanne", "npa": "1004", "addr": "1004 Lausanne,", "rooms": "2.5", "size": 49, "price": 585000, "ppm": 11939, "score": 30, "flag": "RENTED", "amenities": ["renovated"], "reasons": "Good value CHF 11939/m2; Needs work; Garden view; 2.5rm ideal; Tenant in place", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/proximmo-agence-immobiliere-sarl-622/emplacement-rare-deux-pas-centre-ville-1581149"}, {"city": "Lausanne", "npa": "1012", "addr": "1012 Lausanne,", "rooms": "2", "size": 44, "price": 560000, "ppm": 12727, "score": 29, "flag": "RENTED", "amenities": [], "reasons": "Fair value CHF 12727/m2; Renovated; Garden view; Tenant in place", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/golay-immobilier-260/rented-2-room-apartment-lausanne-bethusy-district-1593194"}, {"city": "Lausanne", "npa": "1004", "addr": "1004 Lausanne,", "rooms": "2.5", "size": 49, "price": 550000, "ppm": 11224, "score": 27, "flag": "RENTED", "amenities": ["renovated"], "reasons": "Good value CHF 11224/m2; Garden view; 2.5rm ideal; Tenant in place", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/proximmo-agence-immobiliere-sarl-622/emplacement-rare-deux-pas-centre-ville-1581148"}, {"city": "Lausanne", "npa": "1010", "addr": "1010 Lausanne,", "rooms": "2.5", "size": 48, "price": 740000, "ppm": 15417, "score": 22, "flag": "", "amenities": [], "reasons": "Avg value CHF 15417/m2; 2.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/switzerland-sothebys-lausanne-429/elegant-25-room-apartment-with-balcony-unit-05-1594479"}, {"city": "Lausanne", "npa": "1010", "addr": "1010 Lausanne,", "rooms": "2.5", "size": 48, "price": 735000, "ppm": 15312, "score": 22, "flag": "", "amenities": [], "reasons": "Avg value CHF 15312/m2; 2.5rm ideal", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/switzerland-sothebys-lausanne-429/contemporary-25-room-apartment-with-balcony-lot-02-1594481"}, {"city": "Lausanne", "npa": "1004", "addr": "1004 Lausanne,", "rooms": "1.5", "size": 26, "price": 490000, "ppm": 18846, "score": 20, "flag": "", "amenities": ["renovated"], "reasons": "Expensive CHF 18846/m2; Bright", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/immo-v-3083/renovated-and-furnished-with-terrace-ideal-location-1588642"}, {"city": "Gland", "npa": "1196", "addr": "1196 Gland,", "rooms": "3.5", "size": 88, "price": 550000, "ppm": 6250, "score": 14, "flag": "LIFE ANNUITY", "amenities": ["renovated"], "reasons": "Excellent value CHF 6250/m2; Good size 88m2; 3.5rm ideal; Cannot use now", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/gland/immo-vie-agee-sarl-2312/through-apartment-with-balconies-in-life-annuity-in-gland-1591176"}, {"city": "Lausanne", "npa": "1010", "addr": "1010 Lausanne,", "rooms": "1.5", "size": 29, "price": 480000, "ppm": 16552, "score": 8, "flag": "", "amenities": [], "reasons": "Expensive CHF 16552/m2", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/switzerland-sothebys-lausanne-429/contemporary-bright-studio-apartment-in-lausanne-lot-07-1594482"}, {"city": "Lausanne", "npa": "1003", "addr": "1003 Lausanne,", "rooms": "", "size": 0, "price": 250000, "ppm": 0, "score": 8, "flag": "", "amenities": [], "reasons": "Garden view", "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/proximmo-agence-immobiliere-sarl-622/opportunities-for-private-investors-1484766"}]}
+{
+ "generated": "2026-10-27",
+ "count": 23,
+ "rent_stats": {
+  "Nyon": {
+   "median": 30.14,
+   "avg": 30.86,
+   "count": 12
+  },
+  "Rolle": {
+   "median": 31.09,
+   "avg": 30.51,
+   "count": 12
+  },
+  "Gland": {
+   "median": 24.23,
+   "avg": 23.65,
+   "count": 13
+  },
+  "Lausanne": {
+   "median": 27.46,
+   "avg": 26.3,
+   "count": 11
+  },
+  "Morges": {
+   "median": 28.87,
+   "avg": 27.12,
+   "count": 14
+  }
+ },
+ "mortgage": {
+  "rate": 0.02,
+  "down_pct": 0.2,
+  "operating_pct": 0.01,
+  "amort_years": 15,
+  "income_ratio": 0.33
+ },
+ "items": [
+  {
+   "city": "Morges",
+   "npa": "1110",
+   "rooms": "4",
+   "size": 85,
+   "price": 760000,
+   "ppm": 8941,
+   "score": 74,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [
+    "view"
+   ],
+   "reasons": "Great value CHF 8941/m2; Good size 85m2; Renovated; Open view; 4.0rm ideal",
+   "est_rent": 2699,
+   "rent_m2": 31.76,
+   "gross_yield": 4.26,
+   "down_payment": 152000,
+   "loan": 608000,
+   "monthly_total": 2280,
+   "min_annual_income": 82909,
+   "min_monthly_income": 6909,
+   "comparables": [
+    {
+     "price": 1730,
+     "size": 78,
+     "rooms": 3.5
+    },
+    {
+     "price": 1860,
+     "size": 80,
+     "rooms": 3.5
+    },
+    {
+     "price": 2450,
+     "size": 80,
+     "rooms": 4.0
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/morges/vpi-courtage-467/for-sale-apartment-1110-morges-6257755-1587969"
+  },
+  {
+   "city": "Morges",
+   "npa": "1110",
+   "rooms": "3.5",
+   "size": 109,
+   "price": 730000,
+   "ppm": 6697,
+   "score": 72,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [
+    "renovated"
+   ],
+   "reasons": "Excellent value CHF 6697/m2; Large 109m2; Renovated; 3.5rm ideal",
+   "est_rent": 3462,
+   "rent_m2": 31.76,
+   "gross_yield": 5.69,
+   "down_payment": 146000,
+   "loan": 584000,
+   "monthly_total": 2190,
+   "min_annual_income": 79636,
+   "min_monthly_income": 6636,
+   "comparables": [
+    {
+     "price": 3436,
+     "size": 99,
+     "rooms": 4.5
+    },
+    {
+     "price": 2611,
+     "size": 105,
+     "rooms": 4.0
+    },
+    {
+     "price": 2500,
+     "size": 115,
+     "rooms": 4.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/morges/sev-immobilier-3069/for-sale-condominium-apartment-1110-morges-20261009-1592927"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1010",
+   "rooms": "5.5",
+   "size": 129,
+   "price": 770000,
+   "ppm": 5969,
+   "score": 70,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [
+    "view"
+   ],
+   "reasons": "Excellent value CHF 5969/m2; Large 129m2; Bright; Garden view",
+   "est_rent": 3542,
+   "rent_m2": 27.46,
+   "gross_yield": 5.52,
+   "down_payment": 154000,
+   "loan": 616000,
+   "monthly_total": 2310,
+   "min_annual_income": 84000,
+   "min_monthly_income": 7000,
+   "comparables": [
+    {
+     "price": 2365,
+     "size": 125,
+     "rooms": 3.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/proximmo-agence-immobiliere-sarl-622/votre-logement-familial-20-min-lausanne-1485790"
+  },
+  {
+   "city": "Gland",
+   "npa": "1196",
+   "rooms": "3.5",
+   "size": 82,
+   "price": 780000,
+   "ppm": 9512,
+   "score": 69,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [
+    "view"
+   ],
+   "reasons": "Great value CHF 9512/m2; Good size 82m2; Bright; Open view; 3.5rm ideal",
+   "est_rent": 1987,
+   "rent_m2": 24.23,
+   "gross_yield": 3.06,
+   "down_payment": 156000,
+   "loan": 624000,
+   "monthly_total": 2340,
+   "min_annual_income": 85091,
+   "min_monthly_income": 7091,
+   "comparables": [
+    {
+     "price": 1510,
+     "size": 74,
+     "rooms": 3.0
+    },
+    {
+     "price": 1720,
+     "size": 71,
+     "rooms": 2.5
+    },
+    {
+     "price": 2380,
+     "size": 82,
+     "rooms": 3.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/gland/omnia-immobilier-rolle-445/beautiful-35-room-apartment-in-gland-1460475"
+  },
+  {
+   "city": "Gland",
+   "npa": "1196",
+   "rooms": "3.5",
+   "size": 82,
+   "price": 780000,
+   "ppm": 9512,
+   "score": 69,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [
+    "view"
+   ],
+   "reasons": "Great value CHF 9512/m2; Good size 82m2; Bright; Open view; 3.5rm ideal",
+   "est_rent": 1987,
+   "rent_m2": 24.23,
+   "gross_yield": 3.06,
+   "down_payment": 156000,
+   "loan": 624000,
+   "monthly_total": 2340,
+   "min_annual_income": 85091,
+   "min_monthly_income": 7091,
+   "comparables": [
+    {
+     "price": 1510,
+     "size": 74,
+     "rooms": 3.0
+    },
+    {
+     "price": 1720,
+     "size": 71,
+     "rooms": 2.5
+    },
+    {
+     "price": 2380,
+     "size": 82,
+     "rooms": 3.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/gland/dezage-sarl-2077/charming-apartment-close-to-all-amenities-1581074"
+  },
+  {
+   "city": "Gland",
+   "npa": "1196",
+   "rooms": "3.5",
+   "size": 73,
+   "price": 795000,
+   "ppm": 10890,
+   "score": 55,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [
+    "view"
+   ],
+   "reasons": "Good value CHF 10890/m2; Medium 73m2; Bright; Garden view; 3.5rm ideal",
+   "est_rent": 1769,
+   "rent_m2": 24.23,
+   "gross_yield": 2.67,
+   "down_payment": 159000,
+   "loan": 636000,
+   "monthly_total": 2385,
+   "min_annual_income": 86727,
+   "min_monthly_income": 7227,
+   "comparables": [
+    {
+     "price": 1510,
+     "size": 74,
+     "rooms": 3.0
+    },
+    {
+     "price": 1720,
+     "size": 71,
+     "rooms": 2.5
+    },
+    {
+     "price": 2380,
+     "size": 82,
+     "rooms": 3.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/gland/burnier-cie-233/35-room-apartment-in-gland-1576776"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1005",
+   "rooms": "2.5",
+   "size": 43,
+   "price": 550000,
+   "ppm": 12791,
+   "score": 48,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [],
+   "reasons": "Fair value CHF 12791/m2; Bright; Open view; 2.5rm ideal",
+   "est_rent": 1181,
+   "rent_m2": 27.46,
+   "gross_yield": 2.58,
+   "down_payment": 110000,
+   "loan": 440000,
+   "monthly_total": 1650,
+   "min_annual_income": 60000,
+   "min_monthly_income": 5000,
+   "comparables": [
+    {
+     "price": 1570,
+     "size": 54,
+     "rooms": 2.5
+    },
+    {
+     "price": 1620,
+     "size": 59,
+     "rooms": 2.5
+    },
+    {
+     "price": 1480,
+     "size": 53,
+     "rooms": 2.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/regie-duboux-riviera-2599/25-room-apartment-lausanne-1479348"
+  },
+  {
+   "city": "Nyon",
+   "npa": "1260",
+   "rooms": "3.5",
+   "size": 81,
+   "price": 670000,
+   "ppm": 8272,
+   "score": 47,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [],
+   "reasons": "Great value CHF 8272/m2; Good size 81m2; 3.5rm ideal",
+   "est_rent": 2441,
+   "rent_m2": 30.14,
+   "gross_yield": 4.37,
+   "down_payment": 134000,
+   "loan": 536000,
+   "monthly_total": 2010,
+   "min_annual_income": 73091,
+   "min_monthly_income": 6091,
+   "comparables": [
+    {
+     "price": 2080,
+     "size": 69,
+     "rooms": 3.0
+    },
+    {
+     "price": 4200,
+     "size": 85,
+     "rooms": 3.5
+    },
+    {
+     "price": 2300,
+     "size": 70,
+     "rooms": 3.0
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/nyon/cologny-properties-3110/luxury-apartment-1593459"
+  },
+  {
+   "city": "Gland",
+   "npa": "1196",
+   "rooms": "3.5",
+   "size": 80,
+   "price": 720000,
+   "ppm": 9000,
+   "score": 47,
+   "status": "rented",
+   "flags": "Tenant in place",
+   "amenities": [],
+   "reasons": "Great value CHF 9000/m2; Good size 80m2; Bright; Garden view; 3.5rm ideal; Tenant in place",
+   "est_rent": 1938,
+   "rent_m2": 24.23,
+   "gross_yield": 3.23,
+   "down_payment": 144000,
+   "loan": 576000,
+   "monthly_total": 2160,
+   "min_annual_income": 78545,
+   "min_monthly_income": 6545,
+   "comparables": [
+    {
+     "price": 1510,
+     "size": 74,
+     "rooms": 3.0
+    },
+    {
+     "price": 1720,
+     "size": 71,
+     "rooms": 2.5
+    },
+    {
+     "price": 2380,
+     "size": 82,
+     "rooms": 3.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/gland/ikami-1611/magnificent-35-room-apartment-for-sale-gland-sold-with-tenant-078-403-10-20-1584268"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1003",
+   "rooms": "3.5",
+   "size": 81,
+   "price": 670000,
+   "ppm": 8272,
+   "score": 47,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [],
+   "reasons": "Great value CHF 8272/m2; Good size 81m2; 3.5rm ideal",
+   "est_rent": 2224,
+   "rent_m2": 27.46,
+   "gross_yield": 3.98,
+   "down_payment": 134000,
+   "loan": 536000,
+   "monthly_total": 2010,
+   "min_annual_income": 73091,
+   "min_monthly_income": 6091,
+   "comparables": [
+    {
+     "price": 2500,
+     "size": 80,
+     "rooms": 3.5
+    },
+    {
+     "price": 2450,
+     "size": 101,
+     "rooms": 4.5
+    },
+    {
+     "price": 1550,
+     "size": 68,
+     "rooms": 3.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/cologny-properties-3110/luxury-apartment-1593712"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1010",
+   "rooms": "3.5",
+   "size": 75,
+   "price": 750000,
+   "ppm": 10000,
+   "score": 45,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [],
+   "reasons": "Good value CHF 10000/m2; Good size 75m2; Needs work; 3.5rm ideal",
+   "est_rent": 1751,
+   "rent_m2": 23.34,
+   "gross_yield": 2.8,
+   "down_payment": 150000,
+   "loan": 600000,
+   "monthly_total": 2250,
+   "min_annual_income": 81818,
+   "min_monthly_income": 6818,
+   "comparables": [
+    {
+     "price": 2500,
+     "size": 80,
+     "rooms": 3.5
+    },
+    {
+     "price": 1550,
+     "size": 68,
+     "rooms": 3.5
+    },
+    {
+     "price": 1850,
+     "size": 90,
+     "rooms": 3.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/rham-ventes-lausanne-1873/for-sale-condominium-apartment-1010-lausanne-ap0192-1455126"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1010",
+   "rooms": "3.5",
+   "size": 75,
+   "price": 755000,
+   "ppm": 10067,
+   "score": 42,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [],
+   "reasons": "Good value CHF 10067/m2; Good size 75m2; 3.5rm ideal",
+   "est_rent": 2060,
+   "rent_m2": 27.46,
+   "gross_yield": 3.27,
+   "down_payment": 151000,
+   "loan": 604000,
+   "monthly_total": 2265,
+   "min_annual_income": 82364,
+   "min_monthly_income": 6864,
+   "comparables": [
+    {
+     "price": 2500,
+     "size": 80,
+     "rooms": 3.5
+    },
+    {
+     "price": 1550,
+     "size": 68,
+     "rooms": 3.5
+    },
+    {
+     "price": 1850,
+     "size": 90,
+     "rooms": 3.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/switzerland-sothebys-lausanne-429/bright-apartment-with-wonderful-potential-1551036"
+  },
+  {
+   "city": "Morges",
+   "npa": "1110",
+   "rooms": "2.5",
+   "size": 50,
+   "price": 690000,
+   "ppm": 13800,
+   "score": 41,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [],
+   "reasons": "Fair value CHF 13800/m2; Medium 50m2; Bright; 2.5rm ideal",
+   "est_rent": 1444,
+   "rent_m2": 28.87,
+   "gross_yield": 2.51,
+   "down_payment": 138000,
+   "loan": 552000,
+   "monthly_total": 2070,
+   "min_annual_income": 75273,
+   "min_monthly_income": 6273,
+   "comparables": [
+    {
+     "price": 1530,
+     "size": 53,
+     "rooms": 2.0
+    },
+    {
+     "price": 1650,
+     "size": 65,
+     "rooms": 3.0
+    },
+    {
+     "price": 1300,
+     "size": 41,
+     "rooms": 2.0
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/morges/immocloud-sarl-2545/promotion-residence-cedre-the-construction-site-is-open-1564549"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1010",
+   "rooms": "2.5",
+   "size": 48,
+   "price": 735000,
+   "ppm": 15312,
+   "score": 32,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [],
+   "reasons": "Avg value CHF 15312/m2; Bright; 2.5rm ideal",
+   "est_rent": 1318,
+   "rent_m2": 27.46,
+   "gross_yield": 2.15,
+   "down_payment": 147000,
+   "loan": 588000,
+   "monthly_total": 2205,
+   "min_annual_income": 80182,
+   "min_monthly_income": 6682,
+   "comparables": [
+    {
+     "price": 1550,
+     "size": 68,
+     "rooms": 3.5
+    },
+    {
+     "price": 1570,
+     "size": 54,
+     "rooms": 2.5
+    },
+    {
+     "price": 1620,
+     "size": 59,
+     "rooms": 2.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/properti-ag-2229/contemporary-address-in-the-heart-of-lausanne-1592615"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1010",
+   "rooms": "2.5",
+   "size": 48,
+   "price": 750000,
+   "ppm": 15625,
+   "score": 32,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [],
+   "reasons": "Avg value CHF 15625/m2; Bright; 2.5rm ideal",
+   "est_rent": 1318,
+   "rent_m2": 27.46,
+   "gross_yield": 2.11,
+   "down_payment": 150000,
+   "loan": 600000,
+   "monthly_total": 2250,
+   "min_annual_income": 81818,
+   "min_monthly_income": 6818,
+   "comparables": [
+    {
+     "price": 1550,
+     "size": 68,
+     "rooms": 3.5
+    },
+    {
+     "price": 1570,
+     "size": 54,
+     "rooms": 2.5
+    },
+    {
+     "price": 1620,
+     "size": 59,
+     "rooms": 2.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/properti-ag-2229/contemporary-address-in-the-heart-of-lausanne-1592619"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1004",
+   "rooms": "2.5",
+   "size": 49,
+   "price": 585000,
+   "ppm": 11939,
+   "score": 30,
+   "status": "rented",
+   "flags": "Tenant in place",
+   "amenities": [
+    "renovated"
+   ],
+   "reasons": "Good value CHF 11939/m2; Needs work; Garden view; 2.5rm ideal; Tenant in place",
+   "est_rent": 1144,
+   "rent_m2": 23.34,
+   "gross_yield": 2.35,
+   "down_payment": 117000,
+   "loan": 468000,
+   "monthly_total": 1755,
+   "min_annual_income": 63818,
+   "min_monthly_income": 5318,
+   "comparables": [
+    {
+     "price": 1550,
+     "size": 68,
+     "rooms": 3.5
+    },
+    {
+     "price": 1570,
+     "size": 54,
+     "rooms": 2.5
+    },
+    {
+     "price": 1620,
+     "size": 59,
+     "rooms": 2.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/proximmo-agence-immobiliere-sarl-622/emplacement-rare-deux-pas-centre-ville-1581149"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1012",
+   "rooms": "2",
+   "size": 44,
+   "price": 560000,
+   "ppm": 12727,
+   "score": 29,
+   "status": "rented",
+   "flags": "Tenant in place",
+   "amenities": [],
+   "reasons": "Fair value CHF 12727/m2; Renovated; Garden view; Tenant in place",
+   "est_rent": 1329,
+   "rent_m2": 30.21,
+   "gross_yield": 2.85,
+   "down_payment": 112000,
+   "loan": 448000,
+   "monthly_total": 1680,
+   "min_annual_income": 61091,
+   "min_monthly_income": 5091,
+   "comparables": [
+    {
+     "price": 1570,
+     "size": 54,
+     "rooms": 2.5
+    },
+    {
+     "price": 1620,
+     "size": 59,
+     "rooms": 2.5
+    },
+    {
+     "price": 1480,
+     "size": 53,
+     "rooms": 2.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/golay-immobilier-260/rented-2-room-apartment-lausanne-bethusy-district-1593194"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1004",
+   "rooms": "2.5",
+   "size": 49,
+   "price": 550000,
+   "ppm": 11224,
+   "score": 27,
+   "status": "rented",
+   "flags": "Tenant in place",
+   "amenities": [
+    "renovated"
+   ],
+   "reasons": "Good value CHF 11224/m2; Garden view; 2.5rm ideal; Tenant in place",
+   "est_rent": 1346,
+   "rent_m2": 27.46,
+   "gross_yield": 2.94,
+   "down_payment": 110000,
+   "loan": 440000,
+   "monthly_total": 1650,
+   "min_annual_income": 60000,
+   "min_monthly_income": 5000,
+   "comparables": [
+    {
+     "price": 1550,
+     "size": 68,
+     "rooms": 3.5
+    },
+    {
+     "price": 1570,
+     "size": 54,
+     "rooms": 2.5
+    },
+    {
+     "price": 1620,
+     "size": 59,
+     "rooms": 2.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/proximmo-agence-immobiliere-sarl-622/emplacement-rare-deux-pas-centre-ville-1581148"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1010",
+   "rooms": "2.5",
+   "size": 48,
+   "price": 740000,
+   "ppm": 15417,
+   "score": 22,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [],
+   "reasons": "Avg value CHF 15417/m2; 2.5rm ideal",
+   "est_rent": 1318,
+   "rent_m2": 27.46,
+   "gross_yield": 2.14,
+   "down_payment": 148000,
+   "loan": 592000,
+   "monthly_total": 2220,
+   "min_annual_income": 80727,
+   "min_monthly_income": 6727,
+   "comparables": [
+    {
+     "price": 1550,
+     "size": 68,
+     "rooms": 3.5
+    },
+    {
+     "price": 1570,
+     "size": 54,
+     "rooms": 2.5
+    },
+    {
+     "price": 1620,
+     "size": 59,
+     "rooms": 2.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/switzerland-sothebys-lausanne-429/elegant-25-room-apartment-with-balcony-unit-05-1594479"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1010",
+   "rooms": "2.5",
+   "size": 48,
+   "price": 735000,
+   "ppm": 15312,
+   "score": 22,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [],
+   "reasons": "Avg value CHF 15312/m2; 2.5rm ideal",
+   "est_rent": 1318,
+   "rent_m2": 27.46,
+   "gross_yield": 2.15,
+   "down_payment": 147000,
+   "loan": 588000,
+   "monthly_total": 2205,
+   "min_annual_income": 80182,
+   "min_monthly_income": 6682,
+   "comparables": [
+    {
+     "price": 1550,
+     "size": 68,
+     "rooms": 3.5
+    },
+    {
+     "price": 1570,
+     "size": 54,
+     "rooms": 2.5
+    },
+    {
+     "price": 1620,
+     "size": 59,
+     "rooms": 2.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/switzerland-sothebys-lausanne-429/contemporary-25-room-apartment-with-balcony-lot-02-1594481"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1004",
+   "rooms": "1.5",
+   "size": 26,
+   "price": 490000,
+   "ppm": 18846,
+   "score": 20,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [
+    "renovated"
+   ],
+   "reasons": "Expensive CHF 18846/m2; Bright",
+   "est_rent": 714,
+   "rent_m2": 27.46,
+   "gross_yield": 1.75,
+   "down_payment": 98000,
+   "loan": 392000,
+   "monthly_total": 1470,
+   "min_annual_income": 53455,
+   "min_monthly_income": 4455,
+   "comparables": [
+    {
+     "price": 1190,
+     "size": 18,
+     "rooms": null
+    },
+    {
+     "price": 1125,
+     "size": 41,
+     "rooms": null
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/immo-v-3083/renovated-and-furnished-with-terrace-ideal-location-1588642"
+  },
+  {
+   "city": "Gland",
+   "npa": "1196",
+   "rooms": "3.5",
+   "size": 88,
+   "price": 550000,
+   "ppm": 6250,
+   "score": 14,
+   "status": "life_annuity",
+   "flags": "Life annuity",
+   "amenities": [
+    "renovated"
+   ],
+   "reasons": "Excellent value CHF 6250/m2; Good size 88m2; 3.5rm ideal; CANNOT USE NOW",
+   "est_rent": 2132,
+   "rent_m2": 24.23,
+   "gross_yield": 4.65,
+   "down_payment": 110000,
+   "loan": 440000,
+   "monthly_total": 1650,
+   "min_annual_income": 60000,
+   "min_monthly_income": 5000,
+   "comparables": [
+    {
+     "price": 2650,
+     "size": 108,
+     "rooms": 4.5
+    },
+    {
+     "price": 1510,
+     "size": 74,
+     "rooms": 3.0
+    },
+    {
+     "price": 1720,
+     "size": 71,
+     "rooms": 2.5
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/gland/immo-vie-agee-sarl-2312/through-apartment-with-balconies-in-life-annuity-in-gland-1591176"
+  },
+  {
+   "city": "Lausanne",
+   "npa": "1010",
+   "rooms": "1.5",
+   "size": 29,
+   "price": 480000,
+   "ppm": 16552,
+   "score": 8,
+   "status": "vacant",
+   "flags": "",
+   "amenities": [],
+   "reasons": "Expensive CHF 16552/m2",
+   "est_rent": 796,
+   "rent_m2": 27.46,
+   "gross_yield": 1.99,
+   "down_payment": 96000,
+   "loan": 384000,
+   "monthly_total": 1440,
+   "min_annual_income": 52364,
+   "min_monthly_income": 4364,
+   "comparables": [
+    {
+     "price": 1190,
+     "size": 18,
+     "rooms": null
+    },
+    {
+     "price": 1125,
+     "size": 41,
+     "rooms": null
+    }
+   ],
+   "url": "https://www.immobilier.ch/en/buy/apartment/vaud/lausanne/switzerland-sothebys-lausanne-429/contemporary-bright-studio-apartment-in-lausanne-lot-07-1594482"
+  }
+ ]
+}

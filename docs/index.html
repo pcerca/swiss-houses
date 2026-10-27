@@ -7,40 +7,52 @@
 <style>
   :root{--bg:#0f1420;--card:#161d2e;--line:#263049;--txt:#e8ecf5;--dim:#98a3ba;--acc:#5aa9ff;--good:#3ddc84;--warn:#ffb454;--bad:#ff8f8f;}
   *{box-sizing:border-box}
-  body{margin:0;font:14px/1.5 system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--txt)}
+  body{margin:0;font:13px/1.5 system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--txt)}
   header{padding:22px 20px 10px;border-bottom:1px solid var(--line)}
   h1{margin:0 0 4px;font-size:20px}
   .sub{color:var(--dim);font-size:13px}
-  .filters{display:flex;gap:10px;flex-wrap:wrap;padding:14px 20px;align-items:center}
+  .tabs{display:flex;gap:8px;padding:14px 20px;flex-wrap:wrap}
+  .tab{padding:8px 16px;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:999px;cursor:pointer;font-size:14px}
+  .tab.active{background:var(--acc);border-color:var(--acc);color:#04101f;font-weight:600}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;padding:0 20px 14px;align-items:center}
   select,input{background:var(--card);border:1px solid var(--line);color:var(--txt);padding:7px 10px;border-radius:8px;font-size:13px}
   input{min-width:100px}
   main{padding:0 20px 40px}
   .wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
-  table{border-collapse:collapse;width:100%;min-width:940px;background:var(--card)}
-  th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+  table{border-collapse:collapse;width:100%;min-width:1200px;background:var(--card)}
+  th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
   th{background:#1b2438;color:var(--dim);font-weight:600;cursor:pointer;user-select:none;position:sticky;top:0}
   th:hover{color:var(--txt)}
   tbody tr:hover{background:#1b2438}
   td.num{text-align:right;font-variant-numeric:tabular-nums}
   a{color:var(--acc);text-decoration:none}
   a:hover{text-decoration:underline}
-  .badge{padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600}
+  .badge{padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
   .b-good{background:rgba(61,220,132,.15);color:var(--good)}
   .b-mid{background:rgba(90,169,255,.15);color:var(--acc)}
   .b-low{background:rgba(255,180,84,.15);color:var(--warn)}
   .b-flag{background:rgba(255,100,100,.16);color:var(--bad)}
   .stats{display:flex;gap:14px;flex-wrap:wrap;padding:0 20px 14px}
-  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:140px}
-  .stat b{display:block;font-size:19px}
-  .stat span{color:var(--dim);font-size:12px}
-  .note{color:var(--dim);font-size:12px;padding:12px 20px 0;max-width:1100px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:130px}
+  .stat b{display:block;font-size:18px}
+  .stat span{color:var(--dim);font-size:11px}
+  .note{color:var(--dim);font-size:12px;padding:12px 20px 0;max-width:1200px;line-height:1.6}
+  .hidden{display:none}
+  .comp-list{font-size:11px;color:var(--dim)}
+  .comp-list div{margin:1px 0}
 </style>
 </head>
 <body>
 <header>
   <h1>Swiss House Deals</h1>
-  <div class="sub" id="meta">Vaud canton (Nyon, Rolle, Gland, Lausanne, Morges), asking price ≤ CHF 800k — scraped from immobilier.ch</div>
+  <div class="sub" id="meta">Vaud (Nyon, Rolle, Gland, Lausanne, Morges) · ≤ CHF 800k · scraped from immobilier.ch</div>
 </header>
+
+<div class="tabs">
+  <button class="tab active" data-view="listings">Listings</button>
+  <button class="tab" data-view="mortgage">Mortgage Calculator</button>
+  <button class="tab" data-view="rents">Rent Benchmarks</button>
+</div>
 
 <div class="stats" id="stats"></div>
 
@@ -55,9 +67,12 @@
   <label>Min size <input id="fSize" type="number" placeholder="0" step="10"></label>
   <label>Sort <select id="fSort">
     <option value="score">investment score</option>
+    <option value="gross_yield">gross yield (high)</option>
     <option value="price">price (low to high)</option>
     <option value="ppm">CHF/m² (low to high)</option>
     <option value="size">size (high to low)</option>
+    <option value="monthly_total">monthly cost (low to high)</option>
+    <option value="min_annual_income">min salary (low to high)</option>
   </select></label>
 </div>
 
@@ -68,25 +83,20 @@
       <tbody id="tbody"></tbody>
     </table>
   </div>
-  <div class="note">
-    Score = composite of value per m² (35pts), size (15pts), condition from images (15pts), amenities (20pts),
-    view (10pts), rooms (5pts), minus occupancy penalties (life annuity −40, rented −15).
-    "Life annuity" means the apartment is occupied until the tenant dies — you cannot use or rent it.
-    Rented listings have income but the tenant stays until they leave. All links open immobilier.ch.
-  </div>
+  <div class="note" id="note"></div>
 </main>
 
 <script>
-const state = { data: [], sortKey: 'score', dir: -1 };
+const state = { data: [], rentStats: {}, mortgage: {}, view: 'listings', sortKey: 'score', dir: -1 };
 const $ = s => document.querySelector(s);
-const chf = n => 'CHF ' + new Intl.NumberFormat('de-CH').format(n);
+const chf = n => 'CHF ' + new Intl.NumberFormat('de-CH').format(Math.round(n));
 const num = (n, d = 0) => new Intl.NumberFormat('en-US', {minimumFractionDigits: d, maximumFractionDigits: d}).format(n);
+const pct = (n, d = 1) => num(n, d) + '%';
 
-const COLS = [
+const LISTING_COLS = [
   {k: 'rank', t: '#', n: 1},
   {k: 'city', t: 'City'},
-  {k: 'npa', t: 'NPA'},
-  {k: 'rooms', t: 'Rooms', n: 1},
+  {k: 'rooms', t: 'Rm', n: 1},
   {k: 'size', t: 'm²', n: 1},
   {k: 'price', t: 'Price', n: 1, f: v => chf(v)},
   {k: 'ppm', t: 'CHF/m²', n: 1},
@@ -94,23 +104,87 @@ const COLS = [
     const cls = v >= 70 ? 'b-good' : v >= 55 ? 'b-good' : v >= 40 ? 'b-mid' : v >= 25 ? 'b-low' : 'b-flag';
     return `<span class="badge ${cls}">${v}</span>`;
   }},
-  {k: 'flag', t: 'Status', f: v => v ? `<span class="badge b-flag">${v}</span>` : '<span class="badge b-good">vacant</span>'},
+  {k: 'status', t: 'Status', f: v => {
+    if (v === 'life_annuity') return '<span class="badge b-flag">LIFE ANNUITY</span>';
+    if (v === 'rented') return '<span class="badge b-flag">RENTED</span>';
+    if (v === 'needs_work') return '<span class="badge b-low">Needs work</span>';
+    return '<span class="badge b-good">vacant</span>';
+  }},
+  {k: 'est_rent', t: 'Est. Rent', n: 1, f: v => chf(v) + '/mo'},
+  {k: 'gross_yield', t: 'Yield', n: 1, f: v => `<span class="badge ${v >= 5 ? 'b-good' : v >= 3.5 ? 'b-mid' : 'b-low'}">${pct(v, 2)}</span>`},
   {k: 'amenities', t: 'Amenities', f: v => v && v.length ? v.join(', ') : '—'},
-  {k: 'reasons', t: 'Why', f: v => v ? `<span style="color:var(--dim);font-size:12px">${v}</span>` : '—'},
   {k: 'link', t: 'Link', f: v => v ? `<a href="${v}" target="_blank" rel="noopener">open</a>` : '—'},
 ];
 
-function rows() {
+const MORTGAGE_COLS = [
+  {k: 'rank', t: '#', n: 1},
+  {k: 'city', t: 'City'},
+  {k: 'price', t: 'Price', n: 1, f: v => chf(v)},
+  {k: 'down_payment', t: 'Down (20%)', n: 1, f: v => chf(v)},
+  {k: 'loan', t: 'Mortgage', n: 1, f: v => chf(v)},
+  {k: 'monthly_total', t: 'Monthly cost', n: 1, f: v => `<span class="badge b-mid">${chf(v)}/mo</span>`},
+  {k: 'min_annual_income', t: 'Min salary/yr', n: 1, f: v => `<span class="badge ${v <= 100000 ? 'b-good' : v <= 150000 ? 'b-mid' : 'b-low'}">${chf(v)}</span>`},
+  {k: 'min_monthly_income', t: 'Min salary/mo', n: 1, f: v => chf(v)},
+  {k: 'est_rent', t: 'Est. Rent', n: 1, f: v => chf(v) + '/mo'},
+  {k: 'gross_yield', t: 'Yield', n: 1, f: v => pct(v, 2)},
+  {k: 'comparables', t: 'Similar rents', f: v => {
+    if (!v || !v.length) return '—';
+    return '<div class="comp-list">' + v.map(c => `<div>${chf(c.price)}/mo · ${c.size}m²${c.rooms ? ' · ' + c.rooms + 'rm' : ''}</div>`).join('') + '</div>';
+  }},
+  {k: 'link', t: 'Link', f: v => v ? `<a href="${v}" target="_blank" rel="noopener">open</a>` : '—'},
+];
+
+const RENT_COLS = [
+  {k: 'city', t: 'City'},
+  {k: 'median', t: 'Median CHF/m²/mo', n: 1},
+  {k: 'avg', t: 'Average CHF/m²/mo', n: 1},
+  {k: 'count', t: 'Listings scraped', n: 1},
+  {k: 'est_25', t: '2.5rm (50m²)', n: 1, f: v => chf(v)},
+  {k: 'est_35', t: '3.5rm (75m²)', n: 1, f: v => chf(v)},
+  {k: 'est_45', t: '4.5rm (100m²)', n: 1, f: v => chf(v)},
+];
+
+const NOTES = {
+  listings: 'Score = value per m² (35pts) + size (15) + condition (15) + amenities (20) + view (10) + rooms (5) − occupancy penalty. Est. rent from actual scraped rental listings (median CHF/m² by city, adjusted for condition). Yield = annual rent ÷ price.',
+  mortgage: 'Swiss mortgage: 20% down payment, 2.0% fixed interest, amortize to 65% LTV in 15 years, ~1% operating costs. Min salary = monthly cost × 12 ÷ 33% (max housing cost ratio). Comparable rents = actual rental listings in same city with similar size (±20m²).',
+  rents: 'Rent benchmarks scraped from immobilier.ch rental listings. Median and average CHF/m²/month by city. Estimated rents for common apartment sizes.'
+};
+
+function currentCols() {
+  if (state.view === 'mortgage') return MORTGAGE_COLS;
+  if (state.view === 'rents') return RENT_COLS;
+  return LISTING_COLS;
+}
+
+function currentData() {
+  if (state.view === 'rents') {
+    return Object.entries(state.rentStats).map(([city, s]) => ({
+      city,
+      median: s.median,
+      avg: s.avg,
+      count: s.count,
+      est_25: Math.round(s.median * 50),
+      est_35: Math.round(s.median * 75),
+      est_45: Math.round(s.median * 100),
+    }));
+  }
+  return state.data;
+}
+
+function filteredRows() {
   const city = $('#fCity').value;
   const flag = $('#fFlag').value;
   const maxP = +$('#fPrice').value || Infinity;
   const minS = +$('#fSize').value || 0;
 
-  let a = state.data.filter(r =>
-    (!city || r.city === city) &&
-    (!flag || (flag === 'vacant' ? !r.flag : r.flag)) &&
-    r.price <= maxP && r.size >= minS
-  );
+  let a = currentData().filter(r => {
+    if (state.view === 'rents') return true;
+    if (city && r.city !== city) return false;
+    if (flag === 'vacant' && r.status !== 'vacant') return false;
+    if (flag === 'flagged' && r.status === 'vacant') return false;
+    if (r.price > maxP || r.size < minS) return false;
+    return true;
+  });
 
   const k = state.sortKey, d = state.dir;
   a.sort((x, y) => {
@@ -122,41 +196,57 @@ function rows() {
 }
 
 function render() {
-  const data = rows();
+  const cols = currentCols();
+  const data = filteredRows();
 
-  $('#thead').innerHTML = '<tr>' + COLS.map(c =>
+  $('#thead').innerHTML = '<tr>' + cols.map(c =>
     `<th data-k="${c.k}">${c.t}${state.sortKey === c.k ? (state.dir < 0 ? ' ▾' : ' ▴') : ''}</th>`
   ).join('') + '</tr>';
 
-  $('#tbody').innerHTML = data.map((r, i) => '<tr>' + COLS.map(c => {
-    let raw, v;
-    if (c.k === 'rank') { raw = i + 1; v = raw; }
-    else if (c.k === 'link') { v = c.f(r.url); raw = r.url; }
-    else { raw = r[c.k]; v = c.f ? c.f(raw) : (raw ?? '—'); }
+  $('#tbody').innerHTML = data.map((r, i) => '<tr>' + cols.map(c => {
+    let v;
+    if (c.k === 'rank') { v = i + 1; }
+    else if (c.k === 'link') { v = c.f(r.url); }
+    else { const raw = r[c.k]; v = c.f ? c.f(raw) : (raw ?? '—'); }
     return `<td class="${c.n ? 'num' : ''}">${v}</td>`;
-  }).join('') + '</tr>').join('') || '<tr><td colspan="' + COLS.length + '">No rows match the filters.</td></tr>';
+  }).join('') + '</tr>').join('') ||
+    '<tr><td colspan="' + cols.length + '">No rows match the filters.</td></tr>';
 
-  const avg = (arr) => arr.length ? arr.reduce((s, v) => s + v, 0) / arr.length : 0;
-  const prices = data.map(r => r.price);
-  const scores = data.map(r => r.score);
-  const vacant = data.filter(r => !r.flag).length;
-  const card = (l, v) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`;
-  $('#stats').innerHTML =
-    card('Listings', data.length) +
-    card('Vacant', vacant) +
-    card('Avg score', num(avg(scores))) +
-    card('Avg CHF/m²', chf(Math.round(avg(data.map(r => r.ppm))))) +
-    (prices.length ? card('Range', `${chf(Math.min(...prices))} – ${chf(Math.max(...prices))}`) : '');
+  $('#note').innerHTML = NOTES[state.view];
 
+  // Stats
+  if (state.view === 'rents') {
+    const medians = data.map(r => r.median);
+    const avg = medians.length ? medians.reduce((s, v) => s + v, 0) / medians.length : 0;
+    $('#stats').innerHTML =
+      card('Cities', data.length) +
+      card('Avg rent/m²', chf(avg) + '/mo');
+  } else {
+    const prices = data.map(r => r.price);
+    const yields = data.map(r => r.gross_yield).filter(v => v > 0);
+    const salaries = data.map(r => r.min_annual_income).filter(v => v > 0);
+    const vacant = data.filter(r => r.status === 'vacant').length;
+    const avg = arr => arr.length ? arr.reduce((s, v) => s + v, 0) / arr.length : 0;
+    $('#stats').innerHTML =
+      card('Listings', data.length) +
+      card('Vacant', vacant) +
+      card('Avg yield', pct(avg(yields), 2)) +
+      card('Avg monthly', chf(avg(data.map(r => r.monthly_total)))) +
+      card('Avg min salary', chf(avg(salaries))) +
+      (prices.length ? card('Range', `${chf(Math.min(...prices))} – ${chf(Math.max(...prices))}`) : '');
+  }
+
+  // Sort handlers
   document.querySelectorAll('#thead th').forEach(th => th.onclick = () => {
     const k = th.dataset.k;
-    if (k === 'link' || k === 'reasons' || k === 'amenities') return;
+    if (['link', 'amenities', 'comparables', 'status'].includes(k)) return;
     if (state.sortKey === k) state.dir *= -1;
-    else { state.sortKey = k; state.dir = (k === 'price' || k === 'ppm') ? 1 : -1; }
-    $('#fSort').value = ['score', 'price', 'ppm', 'size'].includes(k) ? k : $('#fSort').value;
+    else { state.sortKey = k; state.dir = ['price', 'ppm', 'monthly_total', 'min_annual_income', 'down_payment'].includes(k) ? 1 : -1; }
     render();
   });
 }
+
+function card(l, v) { return `<div class="stat"><b>${v}</b><span>${l}</span></div>`; }
 
 function fillFilters() {
   const cities = [...new Set(state.data.map(r => r.city))].sort();
@@ -165,10 +255,24 @@ function fillFilters() {
   $('#fCity').value = cities.includes(pv) ? pv : '';
 }
 
+// Tab switching
+document.querySelectorAll('.tab').forEach(b => b.onclick = () => {
+  state.view = b.dataset.view;
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === b));
+  // Reset sort key to something valid for this view
+  if (state.view === 'rents') { state.sortKey = 'median'; state.dir = -1; }
+  else if (state.view === 'mortgage') { state.sortKey = 'monthly_total'; state.dir = 1; }
+  else { state.sortKey = 'score'; state.dir = -1; }
+  // Show/hide filters
+  const showFilters = state.view !== 'rents';
+  document.querySelectorAll('.filters label').forEach(l => l.classList.toggle('hidden', !showFilters));
+  render();
+});
+
 ['#fCity', '#fFlag', '#fPrice', '#fSize'].forEach(s => $(s).oninput = render);
 $('#fSort').onchange = () => {
   state.sortKey = $('#fSort').value;
-  state.dir = ['price', 'ppm'].includes(state.sortKey) ? 1 : -1;
+  state.dir = ['price', 'ppm', 'monthly_total', 'min_annual_income'].includes(state.sortKey) ? 1 : -1;
   render();
 };
 
@@ -176,7 +280,9 @@ fetch('data/listings.json')
   .then(r => r.json())
   .then(d => {
     state.data = d.items;
-    $('#meta').textContent = `Vaud (Nyon, Rolle, Gland, Lausanne, Morges), ≤ CHF 800k · generated ${d.generated} · ${d.count} listings`;
+    state.rentStats = d.rent_stats || {};
+    state.mortgage = d.mortgage || {};
+    $('#meta').textContent = `Vaud · ≤ CHF 800k · generated ${d.generated} · ${d.count} listings · mortgage ${pct((state.mortgage.rate || 0.02) * 100, 1)} fixed · 20% down · 33% income rule`;
     fillFilters();
     render();
   })
