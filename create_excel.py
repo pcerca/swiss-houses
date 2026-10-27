@@ -108,8 +108,14 @@ def main():
     
     print(f"Sorted {len(sorted_rows)} rows by Price/m2")
     
-    # Write headers
-    for col, header in enumerate(headers, 1):
+    # Write headers (Rank column + data columns shifted by 1)
+    rank_cell = ws2.cell(row=1, column=1, value="#")
+    rank_cell.font = header_font
+    rank_cell.fill = PatternFill(start_color="70AD47", end_color="70AD47", fill_type="solid")
+    rank_cell.alignment = header_alignment
+    rank_cell.border = thin_border
+    
+    for col, header in enumerate(headers, 2):
         cell = ws2.cell(row=1, column=col, value=header)
         cell.font = header_font
         cell.fill = PatternFill(start_color="70AD47", end_color="70AD47", fill_type="solid")
@@ -159,7 +165,7 @@ def main():
                 else:
                     fill_color = "FFC7CE"  # Light red
                 
-                for col_idx in range(1, len(headers) + 1):
+                for col_idx in range(1, len(headers) + 2):
                     ws2.cell(row=row_idx, column=col_idx).fill = PatternFill(
                         start_color=fill_color, end_color=fill_color, fill_type="solid"
                     )
@@ -167,7 +173,7 @@ def main():
             pass
     
     # Auto-fit column widths
-    for col in range(1, len(headers) + 1):
+    for col in range(1, len(headers) + 2):
         max_length = 0
         column_letter = openpyxl.utils.get_column_letter(col)
         for row in range(1, len(sorted_rows) + 2):

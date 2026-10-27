@@ -205,6 +205,79 @@ def main():
                     if npa_match:
                         listing['NPA'] = npa_match.group(1)
                 
+                # ===== LOCATION VERIFICATION =====
+                # Step 1: NPA → city (authoritative)
+                NPA_TO_CITY = {
+                    '1260': 'Nyon', '1261': 'Nyon', '1262': 'Nyon', '1263': 'Nyon',
+                    '1180': 'Rolle', '1181': 'Rolle',
+                    '1196': 'Gland', '1197': 'Gland',
+                    '1003': 'Lausanne', '1004': 'Lausanne', '1005': 'Lausanne',
+                    '1006': 'Lausanne', '1007': 'Lausanne', '1008': 'Lausanne',
+                    '1009': 'Lausanne', '1010': 'Lausanne', '1011': 'Lausanne',
+                    '1012': 'Lausanne', '1014': 'Lausanne', '1015': 'Lausanne',
+                    '1017': 'Lausanne', '1018': 'Lausanne',
+                    '1110': 'Morges', '1111': 'Morges', '1112': 'Morges',
+                }
+                TARGET_CITIES = {'Nyon', 'Rolle', 'Gland', 'Lausanne', 'Morges'}
+                npa = listing.get('NPA', '')
+                if npa and npa in NPA_TO_CITY:
+                    actual_city = NPA_TO_CITY[npa]
+                    if actual_city != listing['City']:
+                        print(f"    [!] City corrected: {listing['City']} -> {actual_city} (NPA {npa})")
+                        listing['City'] = actual_city
+                elif npa and npa not in NPA_TO_CITY:
+                    # NPA doesn't belong to any target city — skip this listing
+                    listing['City'] = f'UNKNOWN (NPA {npa})'
+
+                # Step 2: Check description for "Located in X" / "in Le Brassus" etc.
+                # Known non-target communes that leak into search results
+                NON_TARGET = {
+                    'le brassus': 'Le Brassus (Vallée de Joux)',
+                    'brassus': 'Le Brassus (Vallée de Joux)',
+                    'vallée de joux': 'Vallée de Joux',
+                    'vallee de joux': 'Vallée de Joux',
+                    'joux': 'Vallée de Joux',
+                    'saint-cergue': 'Saint-Cergue',
+                    'marchairuz': 'Marchairuz',
+                    'les rousses': 'Les Rousses',
+                    'morez': 'Morez',
+                    'gex': 'Gex',
+                    'ferney': 'Ferney-Voltaire',
+                    'annecy': 'Annecy',
+                    'évian': 'Évian',
+                    'evian': 'Évian',
+                    'thônex': 'Thônex',
+                    'thônex': 'Thônex',
+                    'carouge': 'Carouge',
+                    'vernier': 'Vernier',
+                    'meyrin': 'Meyrin',
+                    'lancy': 'Lancy',
+                    'onetwothree': None,  # placeholder
+                }
+
+                body_lower = body.lower()
+                # Look for "Located in X" or "in X" near property description
+                located_match = re.search(r'(?:located in|situé à|située à|situated in|found in|in the (?:commune|locality) of)\s+([A-Za-zÀ-ÿ\s\-\'()]+)', body, re.IGNORECASE)
+                if located_match:
+                    mentioned = located_match.group(1).strip().lower()[:30]
+                    for key, real_city in NON_TARGET.items():
+                        if key in mentioned and real_city:
+                            print(f"    [!] Location mismatch: tagged '{listing['City']}' but description says '{real_city}'")
+                            listing['City'] = f'MISLOCATED ({real_city})'
+                            break
+
+                # Also check URL slug for non-target communes
+                slug_lower = url.lower()
+                for key, real_city in NON_TARGET.items():
+                    if real_city and key.replace(' ', '-') in slug_lower or key in slug_lower:
+                        if listing['City'] not in TARGET_CITIES or real_city not in listing['City']:
+                            # Only flag if slug clearly names a different commune
+                            if key in slug_lower and listing['City'].lower() not in slug_lower:
+                                print(f"    [!] URL slug suggests '{real_city}' but tagged '{listing['City']}'")
+                                if 'MISLOCATED' not in listing['City'] and 'UNKNOWN' not in listing['City']:
+                                    listing['City'] = f'MISLOCATED ({real_city})'
+                                break
+                
                 year_match = re.search(r'(?:Year of construction|Built in|Année de construction)[:\s]*(\d{4})', body, re.IGNORECASE)
                 if year_match:
                     listing['Year Built'] = year_match.group(1)
@@ -272,8 +345,25 @@ def main():
         
         browser.close()
     
+    # Filter out mislocated and unknown listings
+    valid_listings = []
+    excluded = []
+    for l in all_listings:
+        city = l.get('City', '')
+        if 'MISLOCATED' in city or 'UNKNOWN' in city:
+            excluded.append(l)
+        else:
+            valid_listings.append(l)
+    
+    if excluded:
+        print(f"\n[!] Excluded {len(excluded)} mislocated/unknown listings:")
+        for l in excluded:
+            print(f"    {l['City']} | CHF {l.get('Price (CHF)', '?')} | {l.get('URL', '')[-50:]}")
+    
+    all_listings = valid_listings
+    
     print("\n" + "=" * 60)
-    print(f"STEP 4: Saving {len(all_listings)} listings")
+    print(f"STEP 4: Saving {len(all_listings)} valid listings")
     print("=" * 60)
     
     headers = [
